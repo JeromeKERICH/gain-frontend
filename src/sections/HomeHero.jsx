@@ -17,10 +17,10 @@ const HomeSection = () => {
     },
     {
       id: 3,
-      headline: "The Afri–Gulf Trade Corridor",
-      subtext: "Channeling Gulf capital into Africa's scalable sectors while opening Gulf markets for African ventures.",
+      headline: "Gulf-Africa Investment Nexus",
+      subtext: "Redefining Partnerships and Powering Africa’s Growth through Strategic Investments, and Collaborations.", 
       ctaButtons: [
-        { text: "See Investment Playbook", primary: true, link: "https://drive.google.com/file/d/1N3MR9C4hLFIQaCbbwLS4sxzRcTxeZdK6/view" },
+        { text: "Contact Us", primary: true, link: "/contact" },
       ],
       backgroundImage: "assets/ghero.jpg"
     }

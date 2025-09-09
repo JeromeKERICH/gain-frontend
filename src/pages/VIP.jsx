@@ -268,13 +268,15 @@ export default function VIPTicketPage() {
 
       {/* Checkout Modal */}
       <CheckoutModal 
-        showCheckout={showCheckout}
         setShowCheckout={setShowCheckout}
+        showCheckout={showCheckout}
         ticketCount={ticketCount}
         total={total}
         discount={discount}
         discountAmount={discountAmount}
+        selectedTicket={{ type: "VIP" }} // ✅ add this
       />
+
 
 
       <style jsx>{`

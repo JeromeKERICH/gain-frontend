@@ -113,11 +113,11 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-row sm:flex-row gap-2 justify-center animate-fade-in-up">
-            <a href='#tickets' className="bg-[#C9A15A] text-[#143E37] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+            <a href='#tickets' className="bg-[#C9A15A] text-[#143E37] font-bold py-2 px-6 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
               <span>Get Tickets</span>
               
             </a>
-            <a href='https://drive.google.com/file/d/1Dla1juzW5T2OU-_gHy_HdqLv6kiBsxtH/view' className="bg-transparent border-2 border-[#C9A15A] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:bg-[#C9A15A]/10 flex items-center justify-center">
+            <a href='https://drive.google.com/file/d/1Dla1juzW5T2OU-_gHy_HdqLv6kiBsxtH/view' className="bg-transparent border-2 border-[#C9A15A] text-white font-bold py-2 px-6 text-sm rounded-lg transition-all duration-300 hover:bg-[#C9A15A]/10 flex items-center justify-center">
               <span>Download Brochure</span>
               
             </a>

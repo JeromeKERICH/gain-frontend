@@ -81,7 +81,16 @@ export default function Header() {
               }`}
               onClick={handleLinkClick}
             >
-              Programs
+              GAIN Summit 2025
+            </Link>
+            <Link
+              to="/news" 
+              className={`px-4 py-2 transition-all duration-300 hover:text-[#d4a23f] ${
+                isScrolled ? 'text-gray-600 hover:text-[#d4a23f]' : 'text-gray-300 hover:text-white'
+              }`}
+              onClick={handleLinkClick}
+            >
+              News & Blogs
             </Link>
             <Link
               to="/contact" 
@@ -96,13 +105,13 @@ export default function Header() {
 
           {/* Tickets Button - Desktop */}
           <div className="hidden lg:flex items-center">
-            <a
-              href="#tickets" 
+            <Link
+              to="/tickets" 
               className="bg-gradient-to-r from-[#d4a23f] to-[#e9b85d] hover:from-[#e9b85d] hover:to-[#d4a23f] text-gray-900 font-semibold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               onClick={handleLinkClick}
             >
               Buy Tickets
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -149,8 +158,16 @@ export default function Header() {
               className="block py-4 px-6 text-gray-300 border-b border-gray-700/50 hover:bg-gray-800/50 hover:text-white transition-colors"
               onClick={handleLinkClick}
             >
-              Programs
+              GAIN Summit 2025
             </Link>
+
+            <Link 
+              to="/news" 
+              className="block py-4 px-6 text-gray-300 border-b border-gray-700/50 hover:bg-gray-800/50 hover:text-white transition-colors"
+              onClick={handleLinkClick}
+              >
+              News & Blogs
+              </Link>
             <Link 
               to="/contact" 
               className="block py-4 px-6 text-gray-300 border-b border-gray-700/50 hover:bg-gray-800/50 hover:text-white transition-colors"

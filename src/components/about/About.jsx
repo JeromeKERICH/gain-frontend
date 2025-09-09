@@ -31,12 +31,14 @@ export default function AboutSection() {
           <div className="w-full">
             {/* Animated header */}
             <div className={`transition-all duration-1000 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h3 className="text-l md:text-xl font-semibold text-[#0A1F44] mb-2">
-                At GAIN, We Bridge Capital, Trade, and Growth between the Gulf and Africa
-              </h3>
+              
               
               <p className="text-gray-700 mb-8 leading-relaxed">
-                We are a transaction-driven platform that connects Gulf capital with Africa's most scalable opportunities.
+              Africa is the continent that owns, more than any other, the potential to realize sustainable economic growth.
+Africa, more than any other continent, holds unmatched potential for sustainable economic growth.
+But these vast opportunities are still to be unlocked.
+By embracing new technologies, modern production systems, and strong international trade partnerships, the continent is steadily opening new business routes that connect with Gulf investors.
+
               </p>
             </div>
             

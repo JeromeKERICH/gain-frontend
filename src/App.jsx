@@ -14,6 +14,7 @@ import SuccessPage from "./pages/Success";
 import FailurePage from "./pages/Failure";
 import EventModal from "./components/HomeModal";
 import ContactPage from "./pages/Contact";
+import News from "./pages/News";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/success" element={<SuccessPage/>}/>
           <Route path="/failure" element={<FailurePage />} />
           <Route path="/payment-callback" element={<PaymentCallback/>}/>
+          <Route path="/news" element={<News/>}/>
         
         </Routes>
       </main>

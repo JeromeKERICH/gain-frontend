@@ -14,7 +14,7 @@ export default function PaymentCallback() {
 
     if (trxref && reference) {
       // Call backend to verify payment
-      axios.post("http://localhost:4000/api/payments/verify-payment", { reference })
+      axios.post("http://localhost:3000/api/payments/verify-payment", { reference })
         .then(res => {
           console.log("Payment verified ✅", res.data);
           setStatus("success");

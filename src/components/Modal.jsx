@@ -35,7 +35,7 @@ export default function CheckoutModal({ showCheckout, setShowCheckout, selectedT
 
     setLoading(true);
     try {
-      const res = await axios.post("https://gain-backend-sama.onrender.com/api/payments/initiate-transaction", {
+      const res = await axios.post("http://localhost:3000/api/payments/initiate-transaction", {
         email: formData.email,
         fullName: formData.name,
         phone: formData.phone,

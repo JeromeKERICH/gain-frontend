@@ -90,8 +90,8 @@ const VisionMission = () => {
               
               {/* Content */}
               <div className="text-center">
-                <p className="text-white text-lg md:text-xl font-light leading-relaxed text-justify">
-                  To be the premier Gulf–Africa investment corridor where capital, innovation, and opportunity flow seamlessly across continents.
+                <p className="text-white text-l font-light leading-relaxed text-justify">
+                To be the leading platform that empowers businesses, entrepreneurs, and investors by connecting Gulf capital with Africa’s most scalable and high-impact opportunities and strategic partnerships. We strive to contribute to shared prosperity and global growth by cultivating a dynamic community of business leaders, professionals, and investors committed to Africa’s transformation.
                 </p>
               </div>
             </div>
@@ -125,41 +125,16 @@ const VisionMission = () => {
               
               {/* Content with animated list items */}
               <div className="space-y-4">
-                <div className="flex items-start mission-item">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-[#d4a23f] rounded-full animate-pulse"></div>
-                  </div>
-                  <p className="text-white ml-4 font-light text-justify">
-                  To channel Gulf capital into Africa's scalable sectors through curated, de-risked transactions.
-                  </p>
-                </div>
+                
                 
                 <div className="flex items-start mission-item" style={{ animationDelay: '0.2s' }}>
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-[#d4a23f] rounded-full animate-pulse"></div>
-                  </div>
+                  
                   <p className="text-white ml-4 font-light text-justify">
-                    To open Gulf markets for African exports and ventures, creating two-way trade corridors.
+                  To channel Gulf capital into Africa’s most scalable sectors through curated, de-risked investment transactions, while opening Gulf markets for African exports and ventures to create sustainable two-way trade corridors. We are committed to equipping SMEs and entrepreneurs with access to financing, compliance, and distribution networks, and to building trust through strong legal, financial, and policy frameworks that safeguard every partnership.
                   </p>
                 </div>
                 
-                <div className="flex items-start mission-item" style={{ animationDelay: '0.4s' }}>
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-[#d4a23f] rounded-full animate-pulse"></div>
-                  </div>
-                  <p className="text-white ml-4 font-light text-justify">
-                    To equip SMEs and entrepreneurs with sovereign-grade access to financing, compliance, and distribution networks.
-                  </p>
-                </div>
                 
-                <div className="flex items-start mission-item" style={{ animationDelay: '0.6s' }}>
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-[#d4a23f] rounded-full animate-pulse"></div>
-                  </div>
-                  <p className="text-white ml-4 font-light text-justify">
-                    To Institutionalizing trust via legal, financial, and policy frameworks that safeguard every deal.
-                  </p>
-                </div>
               </div>
             </div>
           </div>

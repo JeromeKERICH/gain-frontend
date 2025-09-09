@@ -21,19 +21,28 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+  
     try {
-      // In a real application, you would make an API call here
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", company: "", subject: "", message: "" });
+      const res = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      if (res.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", company: "", subject: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
     } catch (error) {
+      console.error("Contact form error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-20 md:py-30 px-4 sm:px-6 lg:px-8">
