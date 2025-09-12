@@ -37,7 +37,10 @@ const AboutSummit = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1F44] mb-3 md:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#142626] mb-3 md:mb-4" style={{
+                        fontFamily: 'Georgia, serif',
+                       
+                      }}>
             About the 2025 GAIN Summit
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-[#143E37] to-[#0A1F44] mx-auto mb-6"></div>
@@ -46,7 +49,7 @@ const AboutSummit = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column - Summit Overview */}
           <div className={`transition-all duration-1000 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-gradient-to-br from-[#143E37] to-[#0A1F44] rounded-xl p-6 md:p-8 text-white mb-8">
+            <div className="bg-[#142626] rounded-xl p-6 md:p-8 text-white mb-8">
               <h3 className="text-xl md:text-2xl font-bold mb-4">Join 1,000+ Economic Leaders</h3>
               <p className="mb-4">
                 The GAIN Summit 2025 brings together government delegations, policymakers, African and Gulf leaders, project developers, investors, and entrepreneurs.
@@ -56,7 +59,7 @@ const AboutSummit = () => {
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold text-[#0A1F44] mb-4">Summit Highlights</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#142626] mb-4">Summit Highlights</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-6 h-6 bg-[#143E37] rounded-full flex items-center justify-center mr-3 mt-1">
@@ -97,7 +100,7 @@ const AboutSummit = () => {
           {/* Right Column - Summit Objectives */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
-              <h3 className="text-xl md:text-2xl font-bold text-[#0A1F44] mb-6">Summit Objectives</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#142626] mb-6">Summit Objectives</h3>
               
               <div className="space-y-6">
                 {summitObjectives.map((objective, index) => (

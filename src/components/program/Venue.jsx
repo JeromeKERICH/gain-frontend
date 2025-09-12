@@ -38,7 +38,7 @@ export default function VenueSection() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16" >
           
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0A1F44] mb-4"style={{ fontFamily: 'Georgia, serif'}}>Conference Venue</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#142626] mb-4"style={{ fontFamily: 'Georgia, serif'}}>Conference Venue</h2>
           <span className="inline-block w-16 h-1 bg-[#143E37] mb-4"></span>
           <p className="text-xl text-gray-600">
             A world-class venue for a world-class gathering
@@ -81,7 +81,7 @@ export default function VenueSection() {
             </div>
             
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-2xl font-bold text-[#0A1F44] mb-4">Al Habtoor Palace, Business Bay, Dubai</h3>
+              <h3 className="text-2xl font-bold text-[#142626] mb-4">Al Habtoor Palace, Business Bay, Dubai</h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 Nestled in the heart of Business Bay, the iconic Al Habtoor Palace offers the perfect setting for 
                 high-level networking, strategic discussions, and curated deal-making. With state-of-the-art facilities 
@@ -115,7 +115,7 @@ export default function VenueSection() {
             </div>
             
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <h3 className="text-2xl font-bold text-[#0A1F44] mb-4">Contact & Logistics</h3>
+              <h3 className="text-2xl font-bold text-[#142626] mb-4">Contact & Logistics</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">

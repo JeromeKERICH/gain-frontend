@@ -53,7 +53,7 @@ const RoundtableDiscussions = () => {
     {
       id: 5,
       title: "Agriculture, Food Security & Creative Economy",
-      description: "Harnessing agribusiness innovation and resilient food systems, alongside Africa's creative economy—film, music, and fashion—as drivers of jobs and cultural influence.",
+      description: "Harnessing agribusiness innovation and resilient food systems, alongside Africa's creative economy, film, music, and fashion as drivers of jobs and cultural influence.",
       image: "assets/agr.jpg",
       icon: (
         <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,7 +99,10 @@ const RoundtableDiscussions = () => {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A1F44] mb-3 md:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#142626] mb-3 md:mb-4"  style={{
+                        fontFamily: 'Georgia, serif',
+                       
+                      }}>
             High-Level Roundtable Discussions
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
@@ -131,7 +134,7 @@ const RoundtableDiscussions = () => {
               {/* Content */}
               <div className="p-4 md:p-5 lg:p-6">
                 {/* Title */}
-                <h3 className="text-lg md:text-xl font-bold text-[#0A1F44] mb-2 md:mb-3">{topic.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#142626] mb-2 md:mb-3">{topic.title}</h3>
                 
                 {/* Description */}
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-3 md:mb-4">{topic.description}</p>

@@ -55,6 +55,7 @@ const LeadershipSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
+          
           <h2 className="text-3xl md:text-4xl font-bold text-[#d4a23f] mb-4" style={{ fontFamily: 'Cambria, serif' }}>
             Meet Our Leadership
           </h2>
@@ -82,7 +83,7 @@ const LeadershipSection = () => {
             >
               {/* Content Side - 3/4 width on large screens */}
               <div className="lg:w-3/4 w-full">
-                <div className={`p-8 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 transition-all duration-500 ${
+                <div className={`p-8 rounded-xl bg-gradient-to-br from-gray-600 to-gray-800 transition-all duration-500 ${
                   hoveredCard === leader.id ? 'shadow-xl' : 'shadow-lg'
                 }`}>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{leader.name}</h3>

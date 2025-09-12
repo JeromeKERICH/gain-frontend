@@ -168,10 +168,17 @@ const GainIntroduction = () => {
           {/* Left Column - Text Content */}
           <div className="lg:w-1/2">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h1 className="text-2xl md:text-4xl font-bold text-[#0A1F44] mb-6">
+              <h1 className="text-2xl md:text-4xl font-bold text-[#142626] mb-6" style={{
+                        fontFamily: 'Georgia, serif',
+                       
+                      }}>
+    
                 We are (GAIN) Where Gulf Capital Meets Africa's Growth
               </h1>
-              <p className="text-l text-justify text-gray-700 mb-6 leading-relaxed">
+              <p className="text-l text-justify text-gray-700 mb-6 leading-relaxed" style={{
+                        fontFamily: 'Georgia, serif',
+                        
+                      }}>
                 We are a transaction-focused platform built to connect Gulf capital with Africa's scalable opportunities, 
                 creating a bridge for secure, high-yield investments.
                 We delivers a bridge with a secure, streamlined platform where capital finds opportunity.

@@ -5,7 +5,7 @@ import ServicesSection from '../sections/Services'
 import InvestorsPlaybook from '../sections/Play'
 import PerformanceSection from '../sections/Stats'
 import GainIntroduction from '../sections/About'
-import FiresideChatAd from '../components/AdMondal'
+
 
 
 
@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <FiresideChatAd/>
+      
       <HomeSection/>
       <GainIntroduction/>
       <OurAdvantage/>

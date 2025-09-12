@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function HeroSection() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [showBrochureModal, setShowBrochureModal] = useState(false);
 
   function calculateTimeLeft() {
     const targetDate = new Date('November 24, 2025 00:00:00');
@@ -29,6 +30,17 @@ export default function HeroSection() {
 
     return () => clearTimeout(timer);
   });
+
+  const handleDownloadBrochure = (language) => {
+    // Replace these URLs with your actual brochure file URLs
+    const brochureUrls = {
+      english: 'https://drive.google.com/file/d/1Aj0DZR3oQyD_a36FgJaw_mvLTDbULdjx/view?usp=sharing',
+      french: 'https://drive.google.com/file/d/1Dla1juzW5T2OU-_gHy_HdqLv6kiBsxtH/view' // Replace with actual French brochure URL
+    };
+    
+    window.open(brochureUrls[language], '_blank');
+    setShowBrochureModal(false);
+  };
 
   return (
     <section className="relative h-[650px] flex items-center justify-center overflow-hidden pt-10">
@@ -112,18 +124,64 @@ export default function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row sm:flex-row gap-2 justify-center animate-fade-in-up">
-            <a href='#tickets' className="bg-[#C9A15A] text-[#143E37] font-bold py-2 px-6 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
+            <a href='#tickets' className="bg-[#C9A15A] text-[#143E37] font-bold py-3 px-8 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
               <span>Get Tickets</span>
-              
             </a>
-            <a href='https://drive.google.com/file/d/1Dla1juzW5T2OU-_gHy_HdqLv6kiBsxtH/view' className="bg-transparent border-2 border-[#C9A15A] text-white font-bold py-2 px-6 text-sm rounded-lg transition-all duration-300 hover:bg-[#C9A15A]/10 flex items-center justify-center">
+            <button 
+              onClick={() => setShowBrochureModal(true)}
+              className="bg-transparent border-2 border-[#C9A15A] text-white font-bold py-3 px-8 text-sm rounded-lg transition-all duration-300 hover:bg-[#C9A15A]/10 flex items-center justify-center"
+            >
               <span>Download Brochure</span>
-              
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Brochure Selection Modal */}
+      {showBrochureModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+          <div className="relative bg-[#143E37] rounded-2xl border border-[#C9A15A]/30 max-w-md w-full p-6 animate-fade-in">
+            <button 
+              onClick={() => setShowBrochureModal(false)}
+              className="absolute top-4 right-4 text-[#C9A15A] hover:text-white transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <h3 className="text-xl font-bold text-white mb-2 text-center">Select Brochure Language</h3>
+            <p className="text-gray-300 text-center mb-6">Choose your preferred language to download the brochure</p>
+            
+            <div className="flex flex-col gap-4">
+              <button 
+                onClick={() => handleDownloadBrochure('english')}
+                className="flex items-center justify-between p-4 bg-[#0c1c1c] rounded-lg border border-[#C9A15A]/30 hover:bg-[#C9A15A]/10 transition-colors"
+              >
+                <div className="flex items-center">
+                  <span className="text-white font-medium">English Version</span>
+                </div>
+                <svg className="w-5 h-5 text-[#C9A15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </button>
+              
+              <button 
+                onClick={() => handleDownloadBrochure('french')}
+                className="flex items-center justify-between p-4 bg-[#0c1c1c] rounded-lg border border-[#C9A15A]/30 hover:bg-[#C9A15A]/10 transition-colors"
+              >
+                <div className="flex items-center">
+                  <span className="text-white font-medium">Version Française</span>
+                </div>
+                <svg className="w-5 h-5 text-[#C9A15A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Custom Animation Styles */}
       <style jsx global>{`

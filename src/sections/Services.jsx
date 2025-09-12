@@ -51,7 +51,8 @@ const ServicesSection = () => {
           <div className="inline-block mb-4">
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#d4a23f] to-transparent mx-auto"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Cambria, Sans' }}>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style={{fontFamily: 'Georgia, serif',}}>
+          
             What we <span className="text-[#d4a23f]">do</span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">

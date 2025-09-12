@@ -51,7 +51,11 @@ const VisionMission = () => {
         {/* Section Header */}
         <div className={`text-center mb-5 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block relative">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0c1c1c] mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0c1c1c] mb-4" style={{
+                        fontFamily: 'Georgia, serif',
+                        textShadow: '0 1px 5px rgba(0,0,0,0.5)'
+                      }}>
+          
               Our Guiding Principles
             </h2>
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-[#d4a23f] to-transparent"></div>

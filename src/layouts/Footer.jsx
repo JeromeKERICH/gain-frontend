@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-      <footer className="bg-[#0A1F44] text-white pt-16 pb-8">
+      <footer className="bg-[#142626] text-white pt-16 pb-8">
+        <div className="inline-block mb-4">
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#d4a23f] to-transparent mx-auto"></div>
+          </div>
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -17,7 +20,7 @@ export default function Footer() {
                 />
                 <div>
                   
-                  <p className="text-[#C9A15A]">Bridging Capital, Catalyzing Growth</p>
+                  <p className="text-[#fff]">Bridging Capital, Catalyzing Growth</p>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">

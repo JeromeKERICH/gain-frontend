@@ -40,7 +40,11 @@ const GAINHero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-[#d4a23f] mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-[#d4a23f] mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+                        fontFamily: 'Georgia, serif',
+                        textShadow: '0 1px 5px rgba(0,0,0,0.5)'
+                      }}>
+          
         <span className="block text-white">About </span>Gulf-Africa Investment Nexus
           
         </h1>

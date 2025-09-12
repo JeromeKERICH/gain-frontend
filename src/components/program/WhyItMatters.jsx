@@ -84,7 +84,10 @@ export default function WhyAttendSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block w-16 h-1 bg-[#D4AF37] mb-4"></span>
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-4">Why Attend GAIN 2025?</h2>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-4"  style={{
+                        fontFamily: 'Georgia, serif',
+                       
+                      }}>Why Attend GAIN 2025?</h2>
           <p className="text-xl text-gray-200 font-light">
             Discover unparalleled opportunities for investment, networking, and growth
           </p>

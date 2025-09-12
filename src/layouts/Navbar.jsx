@@ -57,8 +57,17 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
-            <Link 
+          <Link
               to="/" 
+              className={`px-4 py-2 transition-all duration-300 hover:text-[#d4a23f] ${
+                isScrolled ? 'text-gray-600 hover:text-[#d4a23f]' : 'text-gray-300 hover:text-white'
+              }`}
+              onClick={handleLinkClick}
+            >
+              GAIN Summit 2025
+            </Link>
+            <Link 
+              to="/home" 
               className={`px-4 py-2 font-medium transition-all duration-300 hover:text-[#d4a23f] ${
                 isScrolled ? 'text-gray-700 hover:text-[#d4a23f]' : 'text-white'
               }`}
@@ -74,15 +83,7 @@ export default function Header() {
             >
               About
             </Link>
-            <Link
-              to="/programs" 
-              className={`px-4 py-2 transition-all duration-300 hover:text-[#d4a23f] ${
-                isScrolled ? 'text-gray-600 hover:text-[#d4a23f]' : 'text-gray-300 hover:text-white'
-              }`}
-              onClick={handleLinkClick}
-            >
-              GAIN Summit 2025
-            </Link>
+            
             <Link
               to="/news" 
               className={`px-4 py-2 transition-all duration-300 hover:text-[#d4a23f] ${
@@ -106,7 +107,7 @@ export default function Header() {
           {/* Tickets Button - Desktop */}
           <div className="hidden lg:flex items-center">
             <Link
-              to="/tickets" 
+              to="/" 
               className="bg-gradient-to-r from-[#d4a23f] to-[#e9b85d] hover:from-[#e9b85d] hover:to-[#d4a23f] text-gray-900 font-semibold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               onClick={handleLinkClick}
             >
@@ -138,9 +139,16 @@ export default function Header() {
         <div className={`lg:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <nav className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-xl border border-gray-700/50 backdrop-blur-md">
-            <Link 
+          <nav className="bg-[#142626] rounded-lg shadow-xl border border-gray-700/50 backdrop-blur-md">
+          <Link
               to="/" 
+              className="block py-4 px-6 text-gray-300 border-b border-gray-700/50 hover:bg-gray-800/50 hover:text-white transition-colors"
+              onClick={handleLinkClick}
+            >
+              GAIN Summit 2025
+            </Link>
+            <Link 
+              to="/home" 
               className="block py-4 px-6 text-white font-medium border-b border-gray-700/50 hover:bg-gray-800/50 transition-colors"
               onClick={handleLinkClick}
             >
@@ -153,13 +161,7 @@ export default function Header() {
             >
               About GAIN
             </Link>
-            <Link
-              to="/programs" 
-              className="block py-4 px-6 text-gray-300 border-b border-gray-700/50 hover:bg-gray-800/50 hover:text-white transition-colors"
-              onClick={handleLinkClick}
-            >
-              GAIN Summit 2025
-            </Link>
+            
 
             <Link 
               to="/news" 
@@ -176,13 +178,13 @@ export default function Header() {
               Contact
             </Link>
             <div className="p-4 border-t border-gray-700/50">
-              <a
-                href="#tickets" 
+              <Link
+                to="/" 
                 className="block w-full bg-gradient-to-r from-[#d4a23f] to-[#e9b85d] hover:from-[#e9b85d] hover:to-[#d4a23f] text-gray-900 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-center shadow-lg"
                 onClick={handleLinkClick}
               >
                 Buy Tickets
-              </a>
+              </Link>
             </div>
           </nav>
         </div>

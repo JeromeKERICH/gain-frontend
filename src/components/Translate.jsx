@@ -104,7 +104,7 @@ export default function FloatingLanguageSelector() {
             className={`w-full px-4 py-3 text-left transition-colors flex items-center ${
               currentLanguage === "en" 
                 ? "bg-[#0A1F44] text-white" 
-                : "hover:bg-gray-50 text-gray-700"
+                : "hover:bg-[#0a1f44] text-gray-700"
             }`}
           >
             <span className="mr-2">🇬🇧</span>
@@ -149,7 +149,7 @@ export default function FloatingLanguageSelector() {
       {/* Floating selector button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-[#0A1F44] rounded-full shadow-lg flex items-center justify-center text-white hover:bg-[#143E37] transition-all duration-300 border border-[#C9A15A] relative"
+        className="w-14 h-14 bg-[#142626] rounded-full shadow-lg flex items-center justify-center text-white hover:bg-[#142626] transition-all duration-300 border border-[#C9A15A] relative"
         aria-label="Change language"
       >
         {currentLanguage === "en" ? "EN" : "FR"}

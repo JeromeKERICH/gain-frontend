@@ -32,7 +32,7 @@ export default function TicketsSection() {
   ];
 
   return (
-    <section id="tickets" className="py-5 md:py-10 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="tickets" className="py-5 md:py-5 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#d4a23f]/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4db6ac]/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
@@ -44,7 +44,7 @@ export default function TicketsSection() {
             <span className="text-sm uppercase tracking-widest font-medium">Exclusive Access</span>
             <div className="w-12 h-px bg-[#d4a23f] ml-4"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#142626] mb-6" style={{ fontFamily: 'Georgia, serif' }}>
             Summit <span className="text-[#d4a23f]">Tickets</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
@@ -186,7 +186,7 @@ export default function TicketsSection() {
 
               <div className="px-8 pb-8">
                 <Link 
-                  to="/vip" 
+                  to="/vip2" 
                   className="w-full bg-[#d4a23f] text-gray-900 font-medium py-4 px-8 rounded-xl transition-all duration-300 hover:bg-[#e9b85d] hover:shadow-lg flex items-center justify-center group"
                   style={{ fontFamily: 'Georgia, serif' }}
                 >

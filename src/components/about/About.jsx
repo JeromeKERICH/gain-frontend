@@ -24,7 +24,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="py-5 md:py-10 bg-white">
+    <section id="about" ref={sectionRef} className="py-5 md:py-10 bg-gray-50">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex flex-col lg:flex-row items-center gap-5">
           {/* Left Column - Text Content */}

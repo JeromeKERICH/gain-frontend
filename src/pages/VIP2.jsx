@@ -1,56 +1,44 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FaCheck, FaUserTie,  FaPhone, FaEnvelope, FaLock,  FaPlus, FaMinus, FaCheckCircle, FaArrowRight, FaCrown, FaStar, FaGift } from 'react-icons/fa';
-import CheckoutModal from '../components/Modal';
+import ContactSalesModal from '../components/ContactSales';
 
-export default function VIPTicketPage() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
-      const [showCheckout, setShowCheckout] = useState(false);
-      const [ticketCount, setTicketCount] = useState(1);
-    
-      // Calculate pricing
-      const basePrice = 3000;
-      const calculateTotal = () => {
-        return basePrice * ticketCount;
-      };
-    
-      const calculateDiscount = () => {
-        if (ticketCount >= 5) return 0.15;
-        if (ticketCount >= 3) return 0.10;
-        return 0;
-      };
-    
-      const discount = calculateDiscount();
-      const subtotal = calculateTotal();
-      const discountAmount = subtotal * discount;
-      const total = subtotal - discountAmount;
-    
-      const incrementTickets = () => {
-        if (ticketCount < 10) {
-          setTicketCount(ticketCount + 1);
-        }
-      };
-    
-      const decrementTickets = () => {
-        if (ticketCount > 1) {
-          setTicketCount(ticketCount - 1);
-        }
-      };
-    
-  const benefits = [
-    { icon: <FaCrown className="text-gold text-lg" />, text: 'All Business Class benefits plus:' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Priority seating at all sessions and keynotes' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Exclusive access to VIP Lounge throughout conference' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Private dinner with keynote speakers and industry leaders' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Personalized concierge service for scheduling meetings' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Complimentary premium hospitality package' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Executive gift bag with premium merchandise' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Dedicated registration and express entry' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Participation in Deal Flow Showcases (Active Role)' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Private transportation between venues' }
-  ];
+export default function VIPTicketPage2() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const [showCheckout, setShowCheckout] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [ticketCount, setTicketCount] = useState(1);
+
+  // Calculate pricing
+  const basePrice = 3000;
+  const calculateTotal = () => {
+    return basePrice * ticketCount;
+  };
+
+  const calculateDiscount = () => {
+    if (ticketCount >= 5) return 0.15;
+    if (ticketCount >= 3) return 0.10;
+    return 0;
+  };
+
+  const discount = calculateDiscount();
+  const subtotal = calculateTotal();
+  const discountAmount = subtotal * discount;
+  const total = subtotal - discountAmount;
+
+  const incrementTickets = () => {
+    if (ticketCount < 10) {
+      setTicketCount(ticketCount + 1);
+    }
+  };
+
+  const decrementTickets = () => {
+    if (ticketCount > 1) {
+      setTicketCount(ticketCount - 1);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-luxury-pattern">
@@ -61,7 +49,6 @@ export default function VIPTicketPage() {
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: "url('assets/hero.png')" }}
         ></div>
-        
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -94,16 +81,13 @@ export default function VIPTicketPage() {
           <div className="w-full lg:w-2/5 order-1">
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
               {/* VIP Ticket Header with premium design */}
-              <div className="bg-gradient-to-br from-[#0A1F44] via-[#143E37] to-[#0A1F44] text-white p-8 text-center relative overflow-hidden">
-                
-               
-                
-                <div className="relative z-10">
-                  <div className="inline-flex items-center text-gold text-xs uppercase tracking-wider mb-4 border border-gold rounded-full px-3 py-1">
+              <div className="bg-gradient-to-br from-[#0A1F44] via-[#143E37] to-[#0A1F44] text-white p-3 text-center relative overflow-hidden">
+                <div className="relative z-5">
+                  <div className="inline-flex items-center text-gold text-xs uppercase tracking-wider mb-4 border border-gold rounded-full px-2 py-1">
                     <FaCrown className="mr-2" />
                     <span>VIP Exclusive</span>
                   </div>
-                  <h3 className="text-2xl font-serif font-semibold mb-2">VIP Class</h3>
+                  
                   <div className="text-5xl font-serif font-light mb-2">$3,000</div>
                   <p className="text-gray-300 text-sm">per person</p>
                 </div>
@@ -116,17 +100,7 @@ export default function VIPTicketPage() {
                     <span className="text-gray-500 text-sm">Ticket Type</span>
                     <span className="font-semibold text-[#0A1F44] ">VIP Class</span>
                   </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-100">
-                    <span className="text-gray-500 text-sm">Access Level</span>
-                    <span className="font-semibold text-[#0A1F44]">All-Access Premium</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-100">
-                    <span className="text-gray-500 text-sm">Validity</span>
-                    <span className="font-semibold">Nov 24-25, 2025</span>
-                  </div>
                 </div>
-
-                <hr className="my-6 border-gray-100" />
 
                 {/* Quantity Selector */}
                 <div className="mb-6">
@@ -182,19 +156,20 @@ export default function VIPTicketPage() {
                       You save ${discountAmount.toLocaleString()}!
                     </div>
                   )}
+                  
+                  
+                  
                 </div>
+                
 
-               
-
-                {/* CTA Button */}
-                <button 
-                  onClick={() => setShowCheckout(true)}
-                  className="w-full bg-gold hover:from-vip-dark hover:to-vip-purple text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group"
+                {/* Contact Sales Button inside Pricing Breakdown */}
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="w-full bg-gradient-to-r from-[#143E37] to-[#0A1F44] text-white font-semibold py-3 rounded-xl hover:bg-yellow-600 transition-colors duration-200 flex items-center justify-center"
                 >
-                  <FaLock className="mr-2" />
-                  {ticketCount > 1 ? `Purchase ${ticketCount} VIP Tickets` : 'Buy VIP Ticket'} - ${total.toLocaleString()}
-                  <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  Contact Sales <FaArrowRight className="ml-2" />
                 </button>
+                  
 
                 <p className="text-center text-xs text-gray-500 mt-4 flex items-center justify-center">
                   <FaLock className="mr-1 text-gray-400" />
@@ -202,8 +177,6 @@ export default function VIPTicketPage() {
                 </p>
               </div>
             </div>
-
-            
           </div>
 
           {/* Content Column - About & Benefits */}
@@ -211,24 +184,24 @@ export default function VIPTicketPage() {
             {/* About Section */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 mb-8">
               <h2 className="text-xl md:text-2xl font-serif font-semibold text-vip-dark mb-6 flex items-center">
-                
                 Exclusive VIP Experience
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-6 text-justify">
                 The VIP Ticket offers the most exclusive and personalized experience at GAIN 2025. Designed for 
                 distinguished guests, industry leaders, and premium partners, this package provides unparalleled 
                 access, luxury amenities, and personalized service throughout the conference.
+                Experince the pinnacle of exclusivity and comfort with our VIP offerings and make your GAIN 2025 experience truly unforgettable.
               </p>
               <div className="bg-vip-light rounded-xl p-5 border border-vip-light-border">
                 <h3 className="font-semibold text-vip-dark mb-3">Who should attend?:</h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-vip-dark">
+                <ul className="grid grid-cols-1 gap-2 text-sm text-vip-dark">
                   <li className="flex items-center">
                     <FaCheckCircle className="text-gold mr-2" />
                     <span>For VVIPs</span>
                   </li>
                   <li className="flex items-center">
                     <FaCheckCircle className="text-gold mr-2" />
-                    <span>Strategic Investors </span>
+                    <span>Strategic Investor</span>
                   </li>
                   <li className="flex items-center">
                     <FaCheckCircle className="text-gold mr-2" />
@@ -241,43 +214,18 @@ export default function VIPTicketPage() {
                 </ul>
               </div>
             </div>
-
-            {/* Benefits Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h2 className="text-xl md:text-2xl font-serif font-semibold text-vip-dark mb-8 flex items-center">
-                
-                VIP Benefits & Privileges
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start ">
-                    <div className="flex-shrink-0 w-6 h-6 bg-gold/10 rounded-full flex items-center justify-center mt-0.5 mr-3">
-                      {benefit.icon}
-                    </div>
-                    <span className="text-gray-700">{benefit.text}</span>
-                  </div>
-                ))}
-              </div>
-              
-              
-           
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Checkout Modal */}
-      <CheckoutModal 
-        setShowCheckout={setShowCheckout}
-        showCheckout={showCheckout}
-        ticketCount={ticketCount}
-        total={total}
-        discount={discount}
-        discountAmount={discountAmount}
-        selectedTicket={{ type: "VIP" }} // ✅ add this
-      />
+      {/* Contact Sales Modal */}
+      <ContactSalesModal 
+          isOpen={showCheckout} 
+          onClose={() => setShowCheckout(false)} 
+          ticketType="VIP" 
+        />
 
-
+      
 
       <style jsx>{`
         .bg-luxury-pattern {

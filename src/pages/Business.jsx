@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaCheck, FaUserTie, FaBuilding, FaGlobe, FaPhone, FaEnvelope, FaLock, FaReceipt, FaHandshake, FaUsers, FaChartLine, FaBook, FaTicketAlt, FaBus, FaPlus, FaMinus, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
-import CheckoutModal from '../components/Modal'; // Import the modal component
+import ContactSalesModal from '../components/ContactSales';
 
 export default function BusinessTicketPage() {
   useEffect(() => {
@@ -39,16 +39,7 @@ export default function BusinessTicketPage() {
     }
   };
 
-  const benefits = [
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Full access to all main conference sessions & panels' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Entry to Sector Matchmaking Zones' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Invitation to Business Networking Luncheon' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Access to Legal & Advisory Pods' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Participation in Deal Flow Showcases (Observer Role)' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Digital access to the GAIN Market Entry Guide' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Standard registration & badge kit' },
-    { icon: <FaCheckCircle className="text-[#143E37] text-lg" />, text: 'Ticket to the Business Connect Tour' }
-  ];
+
 
   return (
     <div className="min-h-screen bg-luxury-pattern">
@@ -84,7 +75,7 @@ export default function BusinessTicketPage() {
               <div className="bg-gradient-to-br from-[#0A1F44] via-[#143E37] to-[#0A1F44] opacity-95 z-0 text-white p-8 text-center relative overflow-hidden">
                 <div className="relative z-10">
                   <h3 className="text-2xl text-white font-serif font-semibold mb-2">Business Class</h3>
-                  <div className="text-5xl text-gold font-serif font-light mb-2">$1,000</div>
+                  <div className="text-5xl text-gold font-serif font-light mb-2">$1000</div>
                   <p className="text-gray-300 text-sm">per person</p>
                 </div>
               </div>
@@ -96,14 +87,8 @@ export default function BusinessTicketPage() {
                     <span className="text-gray-500 text-sm">Ticket Type</span>
                     <span className="font-semibold text-dark-navy">Business Class</span>
                   </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-100">
-                    <span className="text-gray-500 text-sm">Access Level</span>
-                    <span className="font-semibold text-dark-navy">Full Conference</span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-100">
-                    <span className="text-gray-500 text-sm">Validity</span>
-                    <span className="font-semibold">Nov 24-25, 2025</span>
-                  </div>
+                 
+                
                 </div>
 
                 <hr className="my-6 border-gray-100" />
@@ -166,7 +151,7 @@ export default function BusinessTicketPage() {
                 {/* CTA Button */}
                 <button 
                   onClick={() => setShowCheckout(true)}
-                  className="w-full bg-gold hover:from-navy hover:to-dark-navy text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group"
+                  className="w-full bg-gradient-to-r from-[#143E37] to-[#0A1F44]  text-white font-medium py-4 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group"
                 >
                   <FaLock className="mr-2" />
                   {ticketCount > 1 ? `Purchase ${ticketCount} Tickets` : 'Purchase Ticket'} - ${total.toLocaleString()}
@@ -189,7 +174,7 @@ export default function BusinessTicketPage() {
               <p className="text-gray-700 leading-relaxed mb-6">
                 The Business Class Ticket provides distinguished access to GAIN 2025 for professionals, 
                 entrepreneurs, and innovators seeking meaningful connections and growth opportunities. 
-                Experience the conference in style with premium amenities and exclusive networking events.
+                Experience the conference in style with premium amenities and exclusive networking events. We bring together industry leaders, visionaries, and change-makers to foster collaboration and drive innovation. Join us for an unforgettable experience that will elevate your business and professional journey.
               </p>
               <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
                 <h3 className="font-semibold text-dark-navy mb-3">Who should attend?</h3>
@@ -214,33 +199,19 @@ export default function BusinessTicketPage() {
               </div>
             </div>
 
-            {/* Benefits Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-serif font-semibold text-dark-navy mb-8">Premium Benefits</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 rounded-full flex items-center justify-center mt-0.5 mr-3">
-                      {benefit.icon}
-                    </div>
-                    <span className="text-gray-700">{benefit.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            
+            
           </div>
         </div>
       </div>
 
       {/* Checkout Modal */}
-      <CheckoutModal 
-        showCheckout={showCheckout}
-        setShowCheckout={setShowCheckout}
-        ticketCount={ticketCount}
-        total={total}
-        discount={discount}
-        discountAmount={discountAmount}
+      <ContactSalesModal
+        isOpen={showCheckout} 
+        onClose={() => setShowCheckout(false)} 
+        ticketType="Business Class" 
       />
+
 
       <style jsx>{`
         .bg-luxury-pattern {

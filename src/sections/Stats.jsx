@@ -99,7 +99,7 @@ const PerformanceSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-[#d4a23f] mb-4" style={{ fontFamily: 'Georgia, serif' }}>
             Our Performance
           </h2>
@@ -111,7 +111,7 @@ const PerformanceSection = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-gradient-to-b from-gray-900/50 to-gray-900/20 rounded-xl border border-gray-800/50 hover:border-[#d4a23f]/30 transition-all duration-500">
+            <div key={index} className="text-center p-6 bg-gradient-to-b from-gray-900/10 to-gray-900/20 rounded-xl border border-gray-800/50 hover:border-[#d4a23f]/30 transition-all duration-500">
               <div className="mb-4">
                 <div className="text-5xl md:text-6xl font-bold text-[#d4a23f] mb-2">
                   {countersVisible ? (

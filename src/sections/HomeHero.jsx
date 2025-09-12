@@ -8,7 +8,8 @@ const HomeSection = () => {
   const slides = [
     {
       id: 2,
-      headline: "GAIN Summit 2025 Dubai, 24-25 Nov",
+      headline: "GAIN Summit Dubai,",
+      text: "November 24-25, 2025",
       subtext: "Where Gulf liquidity meets Africa's growth: deals, partnerships, and cross-border opportunities.",
       ctaButtons: [
         { text: "Register Now", primary: true, link: "/programs" },
@@ -241,6 +242,19 @@ const HomeSection = () => {
                   >
                     {slide.headline}
                   </motion.h1>
+                 
+                 {slide.text && (
+                  <motion.h2
+                    variants={childVariants}
+                    className="text-2xl md:text-3xl font-semibold mb-6"
+                    style={{
+                      fontFamily: 'Georgia, serif',
+                      textShadow: '0 1px 5px rgba(0,0,0,0.5)'
+                    }}
+                  >
+                    {slide.text}
+                  </motion.h2>
+                  )}
                   
                   {slide.subtext && (
                     <motion.p 

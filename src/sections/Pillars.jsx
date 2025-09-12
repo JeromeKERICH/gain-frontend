@@ -99,7 +99,10 @@ const OurAdvantage = () => {
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0c1c1c] mb-4 inline-block relative">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0c1c1c] mb-4 inline-block relative" style={{
+                        fontFamily: 'Georgia, serif',
+                        textShadow: '0 1px 5px rgba(0,0,0,0.5)'
+                      }}>
             Our Pillars
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-[#d4a23f] to-transparent"></span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a23f] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>

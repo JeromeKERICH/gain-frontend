@@ -12,7 +12,11 @@ const InvestorsPlaybook = () => {
           <div className="text-center mb-3">
           
             
-            <h2 className="text-2xl md:text-5xl font-bold text-gradient-to-b from-[#142626] to-gray-800 mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-[#142626] to-gray-800 mb-6"style={{
+                        fontFamily: 'Georgia, serif',
+                        
+                      }}>
+           
               THE INVESTOR'S PLAYBOOK
             </h2>
             <p className="text-gray-600 text-lg md:text-xl">

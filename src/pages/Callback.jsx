@@ -5,8 +5,9 @@ import axios from "axios";
 export default function PaymentCallback() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const [status, setStatus] = useState("verifying"); // verifying, success, error
+  const [status, setStatus] = useState("verifying"); 
   const [message, setMessage] = useState("Verifying your payment...");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const trxref = searchParams.get("trxref");
@@ -14,9 +15,9 @@ export default function PaymentCallback() {
 
     if (trxref && reference) {
       // Call backend to verify payment
-      axios.post("http://localhost:3000/api/payments/verify-payment", { reference })
+      axios.post(`${API_URL}/api/payments/verify-payment`, { reference })
         .then(res => {
-          console.log("Payment verified ✅", res.data);
+          console.log("Payment verified", res.data);
           setStatus("success");
           setMessage("Payment verified successfully! Redirecting to your tickets...");
           
@@ -26,7 +27,7 @@ export default function PaymentCallback() {
           }, 2000);
         })
         .catch(err => {
-          console.error("Verification failed ❌", err);
+          console.error("Verification failed", err);
           setStatus("error");
           setMessage("Payment verification failed. Redirecting to try again...");
           
@@ -43,7 +44,7 @@ export default function PaymentCallback() {
         navigate("/");
       }, 2000);
     }
-  }, [searchParams, navigate]);
+  }, [searchParams, navigate, API_URL]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
